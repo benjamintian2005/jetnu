@@ -1,0 +1,6 @@
+[submodule "vendor/ilmentufa"]
+	path = vendor/ilmentufa
+	url = https://github.com/lojban/ilmentufa.git
+[submodule "vendor/Lojban-Translator"]
+	path = vendor/Lojban-Translator
+	url = https://github.com/leeavital/Lojban-Translator.git
