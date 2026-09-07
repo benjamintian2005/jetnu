@@ -1,0 +1,88 @@
+{
+  "entities": [
+    { "id": "alis", "type": "PERSON", "english": "Alice" },
+    { "id": "bab", "type": "PERSON", "english": "Bob" },
+    { "id": "meris", "type": "PERSON", "english": "Mary" },
+    { "id": "pol", "type": "PERSON", "english": "Paul" },
+    { "id": "sam", "type": "PERSON", "english": "Sam" },
+
+    { "id": "rovr", "type": "ANIMAL", "english": "Rover", "species": "dog" },
+    { "id": "tigr", "type": "ANIMAL", "english": "Tiger", "species": "cat" },
+    { "id": "polr", "type": "ANIMAL", "english": "Polly", "species": "bird" },
+    { "id": "flopr", "type": "ANIMAL", "english": "Floppy", "species": "rabbit" },
+    { "id": "nemr", "type": "ANIMAL", "english": "Nemo", "species": "fish" },
+
+    { "id": "bonr", "type": "OBJECT", "english": "the bone" },
+    { "id": "balr", "type": "OBJECT", "english": "the ball" },
+    { "id": "buk", "type": "OBJECT", "english": "the book" },
+    { "id": "xatr", "type": "OBJECT", "english": "the hat" },
+    { "id": "toir", "type": "OBJECT", "english": "the toy" },
+    { "id": "blank", "type": "OBJECT", "english": "the blanket" },
+
+    { "id": "gardn", "type": "PLACE", "english": "the garden" },
+    { "id": "park", "type": "PLACE", "english": "the park" }
+  ],
+
+  "relations": {
+    "owns": { "gismu": "ponse", "roles": ["owner", "possession"] },
+    "likes": { "gismu": "nelci", "roles": ["liker", "liked"] },
+    "gives": { "gismu": "dunda", "roles": ["giver", "gift", "recipient"] },
+    "livesIn": { "gismu": "xabju", "roles": ["resident", "place"] }
+  },
+
+  "facts": [
+    { "relation": "owns", "args": ["alis", "rovr"] },
+    { "relation": "owns", "args": ["bab", "tigr"] },
+    { "relation": "owns", "args": ["meris", "polr"] },
+    { "relation": "owns", "args": ["pol", "flopr"] },
+    { "relation": "owns", "args": ["sam", "nemr"] },
+    { "relation": "owns", "args": ["alis", "buk"] },
+    { "relation": "owns", "args": ["alis", "bonr"] },
+    { "relation": "owns", "args": ["bab", "xatr"] },
+    { "relation": "owns", "args": ["meris", "toir"] },
+    { "relation": "owns", "args": ["pol", "blank"] },
+    { "relation": "owns", "args": ["sam", "balr"] },
+
+    { "relation": "likes", "args": ["rovr", "bonr"] },
+    { "relation": "likes", "args": ["rovr", "balr"] },
+    { "relation": "likes", "args": ["tigr", "toir"] },
+    { "relation": "likes", "args": ["tigr", "blank"] },
+    { "relation": "likes", "args": ["polr", "buk"] },
+    { "relation": "likes", "args": ["polr", "toir"] },
+    { "relation": "likes", "args": ["flopr", "blank"] },
+    { "relation": "likes", "args": ["flopr", "bonr"] },
+    { "relation": "likes", "args": ["nemr", "balr"] },
+    { "relation": "likes", "args": ["nemr", "buk"] },
+    { "relation": "likes", "args": ["alis", "rovr"] },
+    { "relation": "likes", "args": ["bab", "tigr"] },
+    { "relation": "likes", "args": ["meris", "polr"] },
+    { "relation": "likes", "args": ["pol", "flopr"] },
+    { "relation": "likes", "args": ["sam", "nemr"] },
+
+    { "relation": "gives", "args": ["alis", "bonr", "bab"] },
+    { "relation": "gives", "args": ["bab", "xatr", "meris"] },
+    { "relation": "gives", "args": ["meris", "toir", "pol"] },
+    { "relation": "gives", "args": ["pol", "blank", "sam"] },
+    { "relation": "gives", "args": ["sam", "balr", "alis"] },
+    { "relation": "gives", "args": ["alis", "buk", "pol"] },
+    { "relation": "gives", "args": ["bab", "balr", "sam"] },
+    { "relation": "gives", "args": ["meris", "bonr", "alis"] },
+    { "relation": "gives", "args": ["pol", "xatr", "bab"] },
+    { "relation": "gives", "args": ["sam", "toir", "meris"] },
+    { "relation": "gives", "args": ["alis", "toir", "sam"] },
+    { "relation": "gives", "args": ["bab", "buk", "pol"] },
+    { "relation": "gives", "args": ["meris", "xatr", "sam"] },
+    { "relation": "gives", "args": ["pol", "bonr", "meris"] },
+
+    { "relation": "livesIn", "args": ["alis", "gardn"] },
+    { "relation": "livesIn", "args": ["bab", "park"] },
+    { "relation": "livesIn", "args": ["meris", "gardn"] },
+    { "relation": "livesIn", "args": ["pol", "park"] },
+    { "relation": "livesIn", "args": ["sam", "gardn"] },
+    { "relation": "livesIn", "args": ["rovr", "gardn"] },
+    { "relation": "livesIn", "args": ["tigr", "park"] },
+    { "relation": "livesIn", "args": ["polr", "gardn"] },
+    { "relation": "livesIn", "args": ["flopr", "park"] },
+    { "relation": "livesIn", "args": ["nemr", "gardn"] }
+  ]
+}
