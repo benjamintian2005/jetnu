@@ -31,6 +31,8 @@ extracted claim was checked against the toy world's ground truth (`query.js`).
 | Extraction coverage | 99.5% | 99.6% |
 | **Hallucination rate (false / checkable)** | **10.9%** | **1.7%** |
 
+![Hallucination rate: Lojban Tier 3 10.9% vs English control 1.7%](images/hallucination_rate.png)
+
 **The English control model hallucinated less than the Lojban Tier 3 model** — the
 opposite direction from this project's motivating hypothesis. This was manually
 spot-checked, not just trusted from the extractor: e.g. one flagged Lojban "hallucination"
@@ -58,6 +60,8 @@ excluded here.)
 |---|---|---|
 | 64.5% (1128/1748) | 61.3% (1031/1682) | 99.5% (913/918) |
 
+![Grammar-adherence rate by tier: Tier 1 64.5%, Tier 2 61.3%, Tier 3 99.5%](images/grammar_adherence.png)
+
 Tier 3's much higher adherence tracks its much lower bits-per-character (7c) — its
 compound sentences are built from a small, repetitive fact set and are far more
 memorizable than Tier 1/2's free grammatical sampling, which pulls from open-class
@@ -72,6 +76,8 @@ identical hyperparameters across all four runs):
 | Tier 1 | Tier 2 | Tier 3 | English control |
 |---|---|---|---|
 | 1.4772 | 1.4783 | 0.2926 | 0.3279 |
+
+![Validation bits per character by corpus: Tier 1 1.48, Tier 2 1.48, Tier 3 0.29, English control 0.33](images/bits_per_char.png)
 
 Tier 3 and English control compress far better than Tier 1/2 because they're built from
 only 50 underlying toy-world facts (plus fixed templates / bounded word-order variants)

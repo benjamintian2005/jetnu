@@ -91,6 +91,9 @@ hypothesis. See [RESULTS.md](RESULTS.md) for the full evaluation
 (7a–7d), the scope boundary this must be read under, and a discussion of
 why.
 
+![Hallucination rate: Lojban Tier 3 10.9% vs English control 1.7%](images/hallucination_rate.png)
+![Validation bits per character by corpus: Tier 1 1.48, Tier 2 1.48, Tier 3 0.29, English control 0.33](images/bits_per_char.png)
+
 ## Repository layout
 
 ```
