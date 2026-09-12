@@ -65,21 +65,31 @@ control condition — the gaps this project targets.
 
 ## Status
 
-All phases through corpus generation and model training are done. See
-`corpus/` for the four generated corpora and `training/runs/` for the
-four trained checkpoints. Evaluation (phase 7 above) has not started.
+All phases, including evaluation, are done. See `corpus/` for the four
+generated corpora, `training/runs/` for the four trained checkpoints,
+and **[RESULTS.md](RESULTS.md)** for the full write-up.
 
-| Corpus | Sentences | Characters | Val bits/char |
-|---|---|---|---|
-| Tier 1 | 10,000 | ~299K | 1.48 |
-| Tier 2 | 10,000 | ~301K | 1.48 |
-| Tier 3 (Lojban) | ~3,300 | ~299K | 0.29 |
-| English control | ~4,200 | ~299K | 0.33 |
+| Corpus | Sentences | Characters | Val bits/char | Grammar-adherence |
+|---|---|---|---|---|
+| Tier 1 | 10,000 | ~419K | 1.48 | 64.5% |
+| Tier 2 | 10,000 | ~421K | 1.48 | 61.3% |
+| Tier 3 (Lojban) | 3,276 | ~746K | 0.29 | 99.5% |
+| English control | 4,195 | ~886K | 0.33 | n/a (not Lojban) |
 
-(Tier 3 and English control compress far better than Tier 1/2 because
-they're built from only 50 underlying toy-world facts rather than free
-grammatical sampling — an expected, meaningful finding in its own right,
-not an anomaly.)
+(Character counts above are `.jsonl` file bytes, which include the JSON
+wrapper around each line; the underlying generated text itself was
+size-matched to ~299–301K characters across all four corpora. Tier 3 and
+English control compress far better than Tier 1/2 because they're built
+from only 50 underlying toy-world facts rather than free grammatical
+sampling — an expected, meaningful finding in its own right, not an
+anomaly.)
+
+**Headline result (7a):** in this toy-world setup, the English control
+model hallucinated *less* against ground truth than the Lojban Tier 3
+model (1.7% vs. 10.9%) — the opposite of this project's motivating
+hypothesis. See [RESULTS.md](RESULTS.md) for the full evaluation
+(7a–7d), the scope boundary this must be read under, and a discussion of
+why.
 
 ## Repository layout
 
